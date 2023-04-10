@@ -26,3 +26,10 @@ Get-LocalUser | Select FullName, Name, Description, PasswordLastSet, PasswordExp
 # PasswordExpires : 5/20/2023 14:03:58
 # LastLogin       : 4/8/2023 14:10:32
 # Enabled         : False
+
+########################################
+# Don't Worry About Output Formatting! #
+########################################
+# Who works with data that cannot easily be manupulated...export that data to CSV!
+
+Get-LocalUser | Select FullName, Name, Description, PasswordLastSet, PasswordExpires, LastLogin, Enabled | Export-Csv C:\<---DIRECTORY \ OF \ YOUR \ CHOICE--->\LocalUsers.csv
